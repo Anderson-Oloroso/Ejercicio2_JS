@@ -1,26 +1,3 @@
-// 4. Mostrar los números del 1 al 10 con for
-// 5. Mostrar los números del 10 al 1 con while
-// 6. Función que muestre la tabla de multiplicar de un número
-// 7. Sumar los números del 1 al 100 usando un ciclo
-// 8. Función que reciba dos números y devuelva el mayor
-// 9. Contar cuántas letras tiene una palabra usando un ciclo
-// 10. Función que cuente cuántas vocales tiene una palabra
-// 11. Función que reciba un número y muestre todos los pares hasta ese número
-// 12. Función que calcule el factorial de un número
-// 13. Función que reciba una frase y la imprima carácter por carácter
-// 14. Función que invierta una palabra (ej: "hola" → "aloh")
-// 15. Función que determine si una palabra es palíndroma
-// 16. Función que sume solo los números pares del 1 al 50
-// 17. Función que reciba un número y diga si es primo
-// 18. Función que muestre un patrón de asteriscos
-// *
-// **
-// ***
-// ****
-// 19. Función que simule un cajero automático
-// Recibe un saldo y un retiro, valida si puede retirar o no.
-// 20. Función que simule un login
-// Recibe usuario y contraseña y valida si coinciden con valores definidos en el programa.
 console.log("1. NUMERO POSITIVO, NEGATIVO O CERO");
 function positivoeNegativo(numero){
     if (numero > 0){
@@ -76,7 +53,7 @@ mostrarDesc()
  
 console.log("6. TABLA DE MULTIPLICAR");
 function tablaMult(){
-    let num = prompt("Ingrese el numero para la respectiva tabla de multiplicar: ")
+    let num = 12
     for(let j = 1; j <=10;j++){
         console.log(num,"*",j,"=",num*j)
     }
@@ -154,17 +131,44 @@ function factorial(num){
         console.log(1)
     }else{
         let factor = 1
-        for(j = 2; j <=num;num++){
-            factor *=j
+        for(j = 2; j <=num;j++){
+            console.log(factor,"*",j,"=",factor *=j)
         }
-        console.log(factor)
+        console.log("El factorial de",num,"es:",factor)
     }
 }
-factorial(15)
+factorial(6)
 
 console.log("13. IMPRIMIR CARACTER POR CARACTER");
+let palabra = "Metamorfosis"
+for(let letra of palabra ){
+    console.log(letra)
+}
+
 console.log("14. INVERTIR PALABRA");
+for(letra = palabra.length -1;letra>=0; letra--){
+    console.log(palabra[letra])
+}
+
 console.log("15. PALINDROMA");
+function esPolindrome(palabra){
+    let invertido = ''
+    console.log("Palabra a evaluar si es polindrome: "+palabra)
+    for(let i of palabra){
+        invertido = i + invertido
+    }
+    console.log("Palabra Invertida: "+invertido)
+    esPoli = false
+    if(invertido == palabra){
+        esPoli = true
+
+    }else{
+        esPoli = false
+    }
+    console.log("Es polindrome: ",esPoli)
+}
+esPolindrome("reconocer")
+
 console.log("16. SUMA DE NUMEROS PARES DEL 1 AL 50");
 console.log("17. NUMERO PRIMO");
 console.log("18. PATRON DE ASTERISCOS");
