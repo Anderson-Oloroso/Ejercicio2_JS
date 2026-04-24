@@ -66,20 +66,102 @@ mostrarAsc()
 
 console.log("5. NUMEROS DEL 10 AL 1");
 function mostrarDesc(){
-    while( a >= 0 ){
+    let a = 10
+    while( a > 0 ){
         console.log(a)
-        
+        a--
     }
 }
 mostrarDesc()
  
 console.log("6. TABLA DE MULTIPLICAR");
+function tablaMult(){
+    let num = prompt("Ingrese el numero para la respectiva tabla de multiplicar: ")
+    for(let j = 1; j <=10;j++){
+        console.log(num,"*",j,"=",num*j)
+    }
+}
+tablaMult()
+
 console.log("7. SUMA DEL 1 AL 100");
+function sumA100(){
+    let suma = 0
+    for(let y = 1; y<101;y++){
+        suma +=y
+        console.log(suma)
+    }
+}
+sumA100()
+
 console.log("8. EL MAYOR DE DOS NUMEROS");
+function mayorMenor(a,b){
+    if (a>b){
+        console.log(a,"es mayor que",b)
+    }
+    else if (b>a){
+        console.log(b,"es mayor que",a)
+    }
+    else{
+        console.log("Los numeros son iguales")
+    }
+}
+mayorMenor(8,1)
+
 console.log("9. CONTAR LETRAS");
+function contarLetras(){
+    contador = 0
+    let word = "Ornitorrinco"
+    for(let letra of word){
+        contador++
+    }
+    console.log("Letras en la palabra "+word+":",contador)
+}
+contarLetras()
+
 console.log("10. CONTAR VOCALES");
+function contarVocales(palabra){
+    let vocales = "aeiou"
+    let numVocal = 0
+    for (let vocal of palabra.toLowerCase()){
+        for (let letra of vocales){
+            if (letra == vocal){
+                numVocal++
+            }
+        }
+    }
+    console.log("Palabra: "+palabra)
+    console.log("Cantidad de vocales: ",numVocal
+
+    )
+}
+contarVocales("Caballo")
+
 console.log("11. MOSTRAR NUMEROS PARES HASTA N");
+function numPares(num){
+    for(i = 0; i<=num;i++){
+        if (i%2 == 0){
+        console.log(i)
+    }
+    }
+}
+numPares(50)
+
 console.log("12. FACTORIAL");
+function factorial(num){
+    if (num < 0){
+        console.log("No se puede efectuar los factoriales con numeros negativos")
+    }else if (num === 0 || num === 1){
+        console.log(1)
+    }else{
+        let factor = 1
+        for(j = 2; j <=num;num++){
+            factor *=j
+        }
+        console.log(factor)
+    }
+}
+factorial(15)
+
 console.log("13. IMPRIMIR CARACTER POR CARACTER");
 console.log("14. INVERTIR PALABRA");
 console.log("15. PALINDROMA");
