@@ -170,7 +170,74 @@ function esPolindrome(palabra){
 esPolindrome("reconocer")
 
 console.log("16. SUMA DE NUMEROS PARES DEL 1 AL 50");
+function sumaPares(){
+    let suma = 0
+    for(let i = 2; i <= 50; i ++){
+        if (i%2 == 0){
+            suma += i
+        }
+    }
+    console.log("La suma de los números pares del 1 al 50 es:", suma)
+}
+sumaPares()
+
 console.log("17. NUMERO PRIMO");
+function esPrimo(num){
+    console.log("Numero a evaluar si es primo: "+num)
+    if (num <= 1){
+        console.log("Un numero primo es un numero mayor a 1")
+    } else {
+        let esPrimo = true
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
+                esPrimo = false
+                break
+            }
+        }
+        if (esPrimo) {
+            console.log(num,"es un numero primo")
+        } else {
+            console.log(num,"no es un numero primo")
+        }
+    }
+}
+esPrimo(7)
+
 console.log("18. PATRON DE ASTERISCOS");
+function patronAsteriscos(n){
+    for(let i = 1; i <= n; i++){
+        let linea = ''
+        for(let j = 1; j <= i; j++){
+            linea += '*'
+        }
+        console.log(linea)
+    }
+}
+patronAsteriscos(5)
+
 console.log("19. CAJERO AUTOMATICO");
+function cajero(cantidad){
+    let saldo = 5000
+    if (cantidad > saldo){
+        console.log("Saldo insuficiente")
+    }else if (cantidad <= 0){
+        console.log("Cantidad no valida")
+    }else{
+        saldo -= cantidad
+        console.log("Retiro exitoso. Saldo restante:", saldo)
+    }
+}
+cajero(1500)
+
 console.log("20. LOGIN");
+function login(usuario, contraseña){
+    const user = "master"
+    const password = "Lark_2581"
+    console.log("Ingresar usuario y contraseña")
+    if (usuario === user && contraseña === password){
+        console.log("Login exitoso")
+    }else{
+        console.log("Usuario o contraseña incorrectos")
+    }
+}
+login("master","Lark_2581")
